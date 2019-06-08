@@ -12,6 +12,27 @@
     "autoload": {
         "psr-4": {
             "MostafaRDE\\StorageManager\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MostafaRDE\\StorageManager\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MostafaRDE\\StorageManager\\StorageManagerServiceProvider"
+            ],
+            "aliases": {
+                "Alert": "MostafaRDE\\StorageManager\\Facades\\StorageManager"
+            }
         }
     }
 }
