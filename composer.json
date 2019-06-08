@@ -1,0 +1,17 @@
+{
+    "name": "MostafaRDE/storage-manager",
+    "description": "Storage manager for laravel framework",
+    "type": "metapackage",
+    "authors": [
+        {
+            "name": "Mostafa Rostam Dokht Effati",
+            "email": "mostafa.rostamdokht@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "MostafaRDE\\StorageManager\\": "src/"
+        }
+    }
+}
