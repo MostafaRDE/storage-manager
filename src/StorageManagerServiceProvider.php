@@ -13,8 +13,8 @@ class StorageManagerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/mostafa_rde_storage_manager.php', 'mostafa_rde_storage_manager');
-        $this->app->singleton('mostafa-rde-storage-manager', function()
+        $this->mergeConfigFrom(__DIR__ . '/../config/mostafarde_storage_manager.php', 'mostafarde_storage_manager');
+        $this->app->singleton('mostafarde-storage-manager', function()
         {
             return new StorageManager();
         });

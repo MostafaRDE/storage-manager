@@ -8,6 +8,6 @@ class StorageManager extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'mostafa-rde-storage-manager';
+        return 'mostafarde-storage-manager';
     }
 }

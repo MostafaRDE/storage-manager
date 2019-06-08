@@ -36,6 +36,6 @@ class CreateStorageLinksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('storage_pivot');
+        Schema::dropIfExists('storage_links');
     }
 }

@@ -16,7 +16,7 @@ class StorageManager
 
     public function createPathWithDateTime(DateTime $dateTime, $disk = 'public')
     {
-        return config("mostafa_rde_storage_manager.directory_names.$disk") . $dateTime->format('Y') . '/' . $dateTime->format('m') . '/' . $dateTime->format('d');
+        return config("mostafarde_storage_manager.directory_names.$disk") . $dateTime->format('Y') . '/' . $dateTime->format('m') . '/' . $dateTime->format('d');
     }
 
     public function getFileOfColumn($links, $callerName)

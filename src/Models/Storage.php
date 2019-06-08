@@ -32,7 +32,7 @@ class Storage extends Model
         $path = $this->getUrlDatePart($this->uploaded_at);
         if (!is_null($path))
         {
-            $path = config("mostafa_rde_storage_manager.directory_names.$this->disk").$path;
+            $path = config("mostafarde_storage_manager.directory_names.$this->disk").$path;
             return url($this->disk === 'public' ? "storage/$path" : $path);
         }
         return null;
@@ -43,7 +43,7 @@ class Storage extends Model
         $path = $this->getUrlDatePart($this->uploaded_at);
         if (!is_null($path))
         {
-            $path = config("mostafa_rde_storage_manager.directory_names.$this->disk").$path;
+            $path = config("mostafarde_storage_manager.directory_names.$this->disk").$path;
             return $this->disk === 'public' ? "public/$path" : $path;
         }
         return null;
