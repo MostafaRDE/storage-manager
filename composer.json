@@ -19,7 +19,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "MostafaRDE\\StorageManager\\": "src/"
+            "MostafaRDE\\StorageManager\\": "tests/"
         },
         "files": [
             "src/helpers.php"
