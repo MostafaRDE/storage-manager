@@ -67,4 +67,9 @@ class StorageLink extends Model
     {
         return $this->storage;
     }
+
+    public function getUrlAttribute()
+    {
+        return $this->file->url;
+    }
 }

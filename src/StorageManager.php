@@ -19,16 +19,28 @@ class StorageManager
         return config("mostafarde_storage_manager.directory_names.$disk") . $dateTime->format('Y') . '/' . $dateTime->format('m') . '/' . $dateTime->format('d');
     }
 
-    public function getFileOfColumn($links, $callerName)
+    public function getFileOfColumn($links, $callerName, $placeholderKey = 'default')
     {
         if (!is_null($links))
             foreach ($links as $link)
-            {
                 if ($link->linkable_caller_name === $callerName)
-                {
                     return $link;
-                }
-            }
+
+        return $this->placeholder($placeholderKey);
+    }
+
+    public function placeholder($placeholderKey = 'default')
+    {
+        $placeholders = config('mostafarde_storage_manager.placeholders');
+
+        if (is_array($placeholders))
+            return (object)[
+                'url' => $placeholders[$placeholderKey]
+            ];
+        elseif (is_string($placeholders))
+            return (object)[
+                'url' => $placeholders
+            ];
 
         return null;
     }
@@ -57,7 +69,7 @@ class StorageManager
         return null;
     }
 
-    public function uploadFileAndGetLinkable($callerName, UploadedFile $file, $disk = 'public', $validate = [])
+    public function uploadFileAndCreateLinkable($callerName, UploadedFile $file, $disk = 'public', $validate = [])
     {
         $file = $this->uploadMedia($file, $disk, $validate);
 

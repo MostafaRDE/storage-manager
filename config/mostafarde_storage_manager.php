@@ -18,4 +18,8 @@ return [
         'local' => 'rde_storage/',
         'public' => '',
     ],
+
+    'placeholders' => [
+        'default' => url(routeOfAdminDashboardGlobalAssets().'images/placeholders/placeholder.jpg'),
+    ]
 ];
